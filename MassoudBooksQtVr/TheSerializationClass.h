@@ -9,11 +9,11 @@
 class TheSerializationClass
 {
 private:
-	typedef std::string Str;
-	typedef std::vector<Str> StrVctr;
+	typedef const std::string& Str;
+	typedef std::vector<std::string>* StrVctr;
 public:
 	TheSerializationClass(){}
-	void deserialize_the_books(const Str& path, void (* add_book)(Str,StrVctr,Str,Str), std::function<void(std::string)>  add_tag);
+	static void deserialize_the_books(const Str& path, void(*add_book)(Str,Str,Str,StrVctr,int32_t) , std::function<void(std::string)>  add_tag);
 
 
 };

@@ -32,7 +32,7 @@ namespace BookNmSpc
 		virtual void modify_book(std::string old_name, std::string name, std::vector<std::string> tags, std::string catagory, std::string reading_status, int32_t page_number) = 0;
 		virtual void add_tag(std::string tag) = 0;
 	};
-	BOOKSDLL_API typedef std::unique_ptr<BooksInterface> Dab;
+	BOOKSDLL_API typedef std::unique_ptr<BooksInterface> BooksPtr;
 	typedef std::unique_ptr<BookNmSpc::Book> BookPtr;
 
 

@@ -48,6 +48,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\BooksDll\BooksDll\BooksDll.vcxproj">
+      <Project>{d3882f08-7a2e-4e3e-8ab6-8e9c28c8ac56}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\MassoudBooksQtVr\MassoudBooksQtVr.vcxproj">
       <Project>{b12702ad-abfb-343a-a199-8e24837244a3}</Project>
     </ProjectReference>

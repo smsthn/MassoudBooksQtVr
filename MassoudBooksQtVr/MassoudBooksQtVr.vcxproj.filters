@@ -51,6 +51,9 @@
     <ClCompile Include="TheSerializationClass.cpp">
       <Filter>Source Files\Serialization</Filter>
     </ClCompile>
+    <ClCompile Include="Add_Modify_Wndow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MassoudBooksQtVr.h">
@@ -59,9 +62,15 @@
     <QtMoc Include="ListsConnector.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="Add_Modify_Wndow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="MassoudBooksQtVr.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="Add_Modify_Wndow.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

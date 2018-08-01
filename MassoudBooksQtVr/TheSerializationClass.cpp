@@ -1,7 +1,7 @@
 #include "TheSerializationClass.h"
 
 
-void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_book)(Str, StrVctr, Str, Str), std::function<void(std::string)> add_tag)
+void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_book)(Str, Str, Str, StrVctr, int32_t), std::function<void(std::string)> add_tag)
 {
 	MassoudBookSerialization::ToSerialize to_serialize;
 	std::fstream input(path, std::ios::in | std::ios::binary);
@@ -11,9 +11,10 @@ void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_bo
 	}
 	for (const auto& book : to_serialize.allbooks()) {
 		Str name = book.name();
+		int32_t page_number = book.pages();
 		StrVctr tags;
-		for (const auto& tag : book.tag())tags.push_back(tag);
-		Str catagory;
+		for (const auto& tag : book.tag())tags->push_back(tag);
+		std::string catagory;
 		switch (book.catagory()) {
 		case MassoudBookSerialization::Book_Catagories_AnyCatagory: catagory = "Any"; break;
 		case MassoudBookSerialization::Book_Catagories_Math: catagory = "Math"; break;
@@ -29,7 +30,7 @@ void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_bo
 		default:catagory = "Any";
 		}
 
-		Str reading_status;
+		std::string reading_status;
 		switch (book.readingstatus()) {
 		case MassoudBookSerialization::Book_ReadingStatus_AnyReadingStatus: reading_status = "Any"; break;
 		case MassoudBookSerialization::Book_ReadingStatus_Reading: reading_status = "Reading"; break;
@@ -42,7 +43,9 @@ void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_bo
 		default: reading_status = "Any";
 		}
 
-		add_book(name, tags, catagory, reading_status);
+		add_book(name, catagory, reading_status, tags, page_number);
 	}
-	for (const auto& tag : to_serialize.tags())add_tag(tag);
+	if (to_serialize.tags_size() > 0) {
+		for (const auto& tag : to_serialize.tags())add_tag(tag);
+	}
 }
