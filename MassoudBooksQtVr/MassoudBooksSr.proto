@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package MassoudBookSerialization;
+
+message Book {
+	string name = 1;
+
+	enum Catagories{
+		AnyCatagory = 0;
+		Math = 1;
+		GameDev = 2;
+		CSharp = 3;
+		Java = 4;
+		Cs = 5;
+		Cpp = 6;
+		Emmbedded = 7;
+		PyAndMl = 8;
+		Art = 9;
+		Android = 10;
+	}
+	enum ReadingStatus{
+		AnyReadingStatus = 0;
+		Reading = 1;
+		WannaRead = 2;
+		WannaRead2 = 3;
+		YetToWannaRead = 5;
+		DelayedReading = 6;
+		Finished = 7;
+		Dropped = 8;
+	}
+	Catagories catagory = 2;
+	ReadingStatus readingStatus = 3;
+	repeated string tag = 4;
+	int32 pages = 5;
+}
+message ToSerialize{
+	repeated Book AllBooks = 1;
+	repeated string Tags = 2;
+}
