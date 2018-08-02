@@ -18,7 +18,7 @@ public:
 
 
 private:
-	void init_fill_lstviews();
+	void init_items();
 
 private:
 	
@@ -44,8 +44,7 @@ signals:
 
 
 public slots:
-	void refresh_books_listview(QStringList books_list);
-	//void refresh_tags_listview();
 
+	void refresh_listview(QString list_name,QStringList list_to_refresh);
 
 };
