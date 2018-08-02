@@ -154,7 +154,7 @@ background-color: white;
               </widget>
              </item>
              <item>
-              <widget class="QListView" name="listView_4">
+              <widget class="QListView" name="Books_listView">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
                  <horstretch>0</horstretch>
@@ -183,7 +183,7 @@ background-color: white;
            </widget>
           </item>
           <item>
-           <widget class="QListView" name="listView_5">
+           <widget class="QListView" name="BookNotes_listView">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
               <horstretch>0</horstretch>
@@ -216,7 +216,7 @@ background-color: white;
            </widget>
           </item>
           <item>
-           <widget class="QListView" name="listView">
+           <widget class="QListView" name="Catagories_listView">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
               <horstretch>0</horstretch>
@@ -242,7 +242,7 @@ background-color: white;
            </widget>
           </item>
           <item>
-           <widget class="QListView" name="listView_2">
+           <widget class="QListView" name="ReadingStatus_listView">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
               <horstretch>0</horstretch>
@@ -268,7 +268,7 @@ background-color: white;
            </widget>
           </item>
           <item>
-           <widget class="QListView" name="listView_3">
+           <widget class="QListView" name="Tags_listView">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Ignored" vsizetype="Ignored">
               <horstretch>0</horstretch>

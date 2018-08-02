@@ -45,24 +45,24 @@ public:
     QVBoxLayout *BooksVLayout;
     QLabel *Books_Label;
     QLineEdit *BooksSearchTextBox;
-    QListView *listView_4;
+    QListView *Books_listView;
     QFrame *BookNotesVFrame;
     QVBoxLayout *Book_NotesVLayout;
     QLabel *BookNotes_Label;
-    QListView *listView_5;
+    QListView *BookNotes_listView;
     QHBoxLayout *horizontalLayoutUp;
     QFrame *CatagoriesVFrame;
     QVBoxLayout *CatagoriesVLayout;
     QLabel *Catagories_Label;
-    QListView *listView;
+    QListView *Catagories_listView;
     QFrame *ReadingStatusVFrame;
     QVBoxLayout *ReadingStatusVLayout;
     QLabel *ReadingStatus_Label;
-    QListView *listView_2;
+    QListView *ReadingStatus_listView;
     QFrame *TagsVFrame;
     QVBoxLayout *TagsVLayout;
     QLabel *Tags_Label;
-    QListView *listView_3;
+    QListView *Tags_listView;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -158,15 +158,15 @@ public:
 
         BooksVLayout->addWidget(BooksSearchTextBox);
 
-        listView_4 = new QListView(verticalFrame_4);
-        listView_4->setObjectName(QStringLiteral("listView_4"));
+        Books_listView = new QListView(verticalFrame_4);
+        Books_listView->setObjectName(QStringLiteral("Books_listView"));
         QSizePolicy sizePolicy3(QSizePolicy::Ignored, QSizePolicy::Ignored);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(1);
-        sizePolicy3.setHeightForWidth(listView_4->sizePolicy().hasHeightForWidth());
-        listView_4->setSizePolicy(sizePolicy3);
+        sizePolicy3.setHeightForWidth(Books_listView->sizePolicy().hasHeightForWidth());
+        Books_listView->setSizePolicy(sizePolicy3);
 
-        BooksVLayout->addWidget(listView_4);
+        BooksVLayout->addWidget(Books_listView);
 
 
         verticalLayout_5->addWidget(verticalFrame_4);
@@ -186,12 +186,12 @@ public:
 
         Book_NotesVLayout->addWidget(BookNotes_Label);
 
-        listView_5 = new QListView(BookNotesVFrame);
-        listView_5->setObjectName(QStringLiteral("listView_5"));
-        sizePolicy3.setHeightForWidth(listView_5->sizePolicy().hasHeightForWidth());
-        listView_5->setSizePolicy(sizePolicy3);
+        BookNotes_listView = new QListView(BookNotesVFrame);
+        BookNotes_listView->setObjectName(QStringLiteral("BookNotes_listView"));
+        sizePolicy3.setHeightForWidth(BookNotes_listView->sizePolicy().hasHeightForWidth());
+        BookNotes_listView->setSizePolicy(sizePolicy3);
 
-        Book_NotesVLayout->addWidget(listView_5);
+        Book_NotesVLayout->addWidget(BookNotes_listView);
 
 
         horizontalLayoutDown->addWidget(BookNotesVFrame);
@@ -214,12 +214,12 @@ public:
 
         CatagoriesVLayout->addWidget(Catagories_Label);
 
-        listView = new QListView(CatagoriesVFrame);
-        listView->setObjectName(QStringLiteral("listView"));
-        sizePolicy3.setHeightForWidth(listView->sizePolicy().hasHeightForWidth());
-        listView->setSizePolicy(sizePolicy3);
+        Catagories_listView = new QListView(CatagoriesVFrame);
+        Catagories_listView->setObjectName(QStringLiteral("Catagories_listView"));
+        sizePolicy3.setHeightForWidth(Catagories_listView->sizePolicy().hasHeightForWidth());
+        Catagories_listView->setSizePolicy(sizePolicy3);
 
-        CatagoriesVLayout->addWidget(listView);
+        CatagoriesVLayout->addWidget(Catagories_listView);
 
 
         horizontalLayoutUp->addWidget(CatagoriesVFrame);
@@ -236,12 +236,12 @@ public:
 
         ReadingStatusVLayout->addWidget(ReadingStatus_Label);
 
-        listView_2 = new QListView(ReadingStatusVFrame);
-        listView_2->setObjectName(QStringLiteral("listView_2"));
-        sizePolicy3.setHeightForWidth(listView_2->sizePolicy().hasHeightForWidth());
-        listView_2->setSizePolicy(sizePolicy3);
+        ReadingStatus_listView = new QListView(ReadingStatusVFrame);
+        ReadingStatus_listView->setObjectName(QStringLiteral("ReadingStatus_listView"));
+        sizePolicy3.setHeightForWidth(ReadingStatus_listView->sizePolicy().hasHeightForWidth());
+        ReadingStatus_listView->setSizePolicy(sizePolicy3);
 
-        ReadingStatusVLayout->addWidget(listView_2);
+        ReadingStatusVLayout->addWidget(ReadingStatus_listView);
 
 
         horizontalLayoutUp->addWidget(ReadingStatusVFrame);
@@ -258,12 +258,12 @@ public:
 
         TagsVLayout->addWidget(Tags_Label);
 
-        listView_3 = new QListView(TagsVFrame);
-        listView_3->setObjectName(QStringLiteral("listView_3"));
-        sizePolicy3.setHeightForWidth(listView_3->sizePolicy().hasHeightForWidth());
-        listView_3->setSizePolicy(sizePolicy3);
+        Tags_listView = new QListView(TagsVFrame);
+        Tags_listView->setObjectName(QStringLiteral("Tags_listView"));
+        sizePolicy3.setHeightForWidth(Tags_listView->sizePolicy().hasHeightForWidth());
+        Tags_listView->setSizePolicy(sizePolicy3);
 
-        TagsVLayout->addWidget(listView_3);
+        TagsVLayout->addWidget(Tags_listView);
 
 
         horizontalLayoutUp->addWidget(TagsVFrame);

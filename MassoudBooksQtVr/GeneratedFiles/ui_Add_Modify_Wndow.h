@@ -33,8 +33,8 @@ public:
     QVBoxLayout *verticalLayout;
     QLineEdit *BookNameTxtBx;
     QComboBox *TagsComboBox;
-    QLineEdit *CatagoryTxtBx;
-    QLineEdit *PageStatusTxtBx;
+    QComboBox *CatagoryComboBox;
+    QComboBox *ReadingStatusComboBox;
     QSpinBox *PagesSpinBox;
     QFrame *verticalFrameLeft;
     QVBoxLayout *verticalLayout_2;
@@ -98,21 +98,17 @@ public:
 
         verticalLayout->addWidget(TagsComboBox);
 
-        CatagoryTxtBx = new QLineEdit(verticalFrameRight);
-        CatagoryTxtBx->setObjectName(QStringLiteral("CatagoryTxtBx"));
-        CatagoryTxtBx->setMinimumSize(QSize(0, 28));
-        CatagoryTxtBx->setSizeIncrement(QSize(0, 0));
-        CatagoryTxtBx->setBaseSize(QSize(0, 0));
+        CatagoryComboBox = new QComboBox(verticalFrameRight);
+        CatagoryComboBox->setObjectName(QStringLiteral("CatagoryComboBox"));
+        CatagoryComboBox->setMinimumSize(QSize(0, 28));
 
-        verticalLayout->addWidget(CatagoryTxtBx);
+        verticalLayout->addWidget(CatagoryComboBox);
 
-        PageStatusTxtBx = new QLineEdit(verticalFrameRight);
-        PageStatusTxtBx->setObjectName(QStringLiteral("PageStatusTxtBx"));
-        PageStatusTxtBx->setMinimumSize(QSize(0, 28));
-        PageStatusTxtBx->setSizeIncrement(QSize(0, 0));
-        PageStatusTxtBx->setBaseSize(QSize(0, 0));
+        ReadingStatusComboBox = new QComboBox(verticalFrameRight);
+        ReadingStatusComboBox->setObjectName(QStringLiteral("ReadingStatusComboBox"));
+        ReadingStatusComboBox->setMinimumSize(QSize(0, 28));
 
-        verticalLayout->addWidget(PageStatusTxtBx);
+        verticalLayout->addWidget(ReadingStatusComboBox);
 
         PagesSpinBox = new QSpinBox(verticalFrameRight);
         PagesSpinBox->setObjectName(QStringLiteral("PagesSpinBox"));

@@ -1,19 +1,16 @@
 #include "TheSerializationClass.h"
 
 
-void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_book)(Str, Str, Str, StrVctr, int32_t), std::function<void(std::string)> add_tag)
+void TheSerializationClass::deserialize_the_books(Str  path)
 {
 	MassoudBookSerialization::ToSerialize to_serialize;
 	std::fstream input(path, std::ios::in | std::ios::binary);
-	if (!to_serialize.ParseFromIstream(&input))
-	{
-		throw "Could Not Load File";
-	}
+	to_serialize.ParseFromIstream(&input);
 	for (const auto& book : to_serialize.allbooks()) {
 		Str name = book.name();
 		int32_t page_number = book.pages();
-		StrVctr tags;
-		for (const auto& tag : book.tag())tags->push_back(tag);
+		std::vector<std::string> tags;
+		for (const auto& tag : book.tag())tags.push_back(tag);
 		std::string catagory;
 		switch (book.catagory()) {
 		case MassoudBookSerialization::Book_Catagories_AnyCatagory: catagory = "Any"; break;
@@ -43,9 +40,13 @@ void TheSerializationClass::deserialize_the_books(const Str & path, void(*add_bo
 		default: reading_status = "Any";
 		}
 
-		add_book(name, catagory, reading_status, tags, page_number);
+		add_book(name, catagory, reading_status, &tags, page_number);
+
 	}
+	auto f = to_serialize.tags_size();
 	if (to_serialize.tags_size() > 0) {
 		for (const auto& tag : to_serialize.tags())add_tag(tag);
+
 	}
 }
+

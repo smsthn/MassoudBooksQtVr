@@ -12,8 +12,12 @@ private:
 	typedef const std::string& Str;
 	typedef std::vector<std::string>* StrVctr;
 public:
+	std::function<void(const std::string&)>  add_tag;
+	std::function<void(Str, Str, Str, StrVctr,int32_t)> add_book;
 	TheSerializationClass(){}
-	static void deserialize_the_books(const Str& path, void(*add_book)(Str,Str,Str,StrVctr,int32_t) , std::function<void(std::string)>  add_tag);
+
+
+	void deserialize_the_books(Str path);
 
 
 };

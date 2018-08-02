@@ -42,9 +42,6 @@
     <ClCompile Include="MassoudBooksQtVr.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ListsConnector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MassoudBooksSr.pb.cc">
       <Filter>Source Files\Serialization</Filter>
     </ClCompile>
@@ -54,15 +51,18 @@
     <ClCompile Include="Add_Modify_Wndow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TheListsConnector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="MassoudBooksQtVr.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="ListsConnector.h">
+    <QtMoc Include="Add_Modify_Wndow.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="Add_Modify_Wndow.h">
+    <QtMoc Include="TheListsConnector.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
